@@ -97,8 +97,11 @@ form{
 	border: 1px solid #444;
 }
 
+*:focus{
+  outline: none;
+}
+
 .search:focus{
-	outline: none;
 	border: 1px solid #fd7070;
 }
 
