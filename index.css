@@ -11,10 +11,9 @@
 }
 
 body{
-	background: #222;
+	background: #222222;
 	padding-top: 15%;
 	font-size: 12px;
-	-webkit-font-smoothing: antialiased;
 }
 
 p, li, a{
@@ -75,6 +74,23 @@ a:hover{
 	margin: 0 10px;
 	border: 1px solid #fd7070;
 }
+
+/*
+  RSS
+*/
+.rss {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+.feed {
+  width: 100%;
+}
+
+.bold {
+  font-weight: bold;
+}
 	
 /*
 	Search Bars
@@ -92,9 +108,14 @@ form{
 	height: 20px;
 	margin-right: -4px;
 	padding: 2px;
-	background: #222;
+	background: #222222;
 	color: #fd7070;
-	border: 1px solid #444;
+	border: 1px solid #444444;
+}
+
+::-webkit-input-placeholder {
+  color:    #444444;
+  opacity:  1;
 }
 
 *:focus{
@@ -108,14 +129,14 @@ form{
 .go{
 	height: 26px;
 	width: 40px;
-	background: #222;
+	background: #222222;
 	color: #fd7070;
 	border: 1px solid #fd7070;
 }
 
 .go:hover{
 	background: #fd7070;
-	color: #222;
+	color: #222222;
 	cursor: pointer;
 }
 

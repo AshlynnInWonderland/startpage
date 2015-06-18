@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Home</title>
-		<link rel='stylesheet' type='text/css' href='index.css'/>
+    <link rel='stylesheet' type='text/css' href='index.css'/>
 	</head>
 	
 	<body>
@@ -15,7 +15,7 @@
 					<li><a target="_blank" href='https://www.github.com'>GitHub</a></li>
           <li><a target="_blank" href='http://www.reddit.com/r/gamedev/'>/r/GameDev</a></li>
           <li><a target="_blank" href='https://docs.python.org/3.3/library/'>Python Docs</a></li>
-					<li><a target="_blank" href='http://www.stackoverflow.com'>Stack Overflow</a></li>
+          <li><a target="_blank" href='http://www.stackoverflow.com'>Stack Overflow</a></li>
 				</ul>
 			</div>
 			
@@ -46,20 +46,22 @@
 			<p><a target="_blank" href='https://facebook.com'>Facebook</a></p>
 		</div>
 		
-		<form method="post" action="https://duckduckgo.com/" target="_blank" onsubmit="this.submit(); this.reset(); return false;"> 
-			<input class='search' name='q' type='text' placeholder='DuckDuckGo'/> 
-			<input class='go' type='submit' value='GO'/>
-		</form>
-		
-    <form method="get" action="https://animebytes.tv/torrents.php" target="_blank" onsubmit="this.submit(); this.reset(); return false;"> 
-			<input class='search' name='searchstr' type='text' placeholder='AnimeBytes'/> 
-			<input class='go' type='submit' value='GO'/>
-		</form>
-		
-		<form method="get" action="https://aur.archlinux.org/packages/" target="_blank" onsubmit="this.submit(); this.reset(); return false;">
-			<input class='search' name='K' type='text' placeholder='AUR'/> 
-			<input class='go' type='submit' value='GO'/>
-		</form>
-		
+    <div class='rss'>
+      <div class='list feed'>
+        <ul class='batotofeed'>></ul>
+      </div>
+      <script type="text/javascript">
+        var loadRss = function(){
+          var xhr=new XMLHttpRequest();
+          xhr.open("get","ignore/batoto.html",true)
+          xhr.onload = function(){
+            document.querySelector(".batotofeed").innerHTML = xhr.responseText;
+          };
+          xhr.send();
+        }
+        window.setInterval(loadRss, 300000);
+        loadRss()
+      </script>
+    </div>
 	</body>
 </html>
